@@ -1,5 +1,6 @@
 @startuml
 'autonumber
+
 actor user
 entity SettingsWindow
 user -> SettingsWindow: Enter url/username/password
