@@ -1,4 +1,5 @@
 # Получаем данные из Jira DC(Server) 
+# Status: Develop
 
 ## Приложение будет получать из Jira DC(Server) следующие данные:
 1. CustomFields (Пользовательские поля)
