@@ -1,0 +1,17 @@
+@startuml
+'autonumber
+actor user
+entity SettingsWindow
+user -> SettingsWindow: Enter url/username/password
+user -> SettingsWindow: Enter button "Test connection"
+SettingsWindow -> JiraApi: post requests
+JiraApi -> JiraApi: data validation
+alt Data validation is correct
+JiraApi --> SettingsWindow: Successful (message)
+else Data validation is incorrect
+JiraApi --> SettingsWindow: Unsuccessfully (message)
+end
+user -> SettingsWindow: Enter button "Save"
+SettingsWindow -> Qsettings: Save Url
+SettingsWindow -> WindowsCredentials: Save username/password
+@enduml
