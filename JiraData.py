@@ -186,6 +186,8 @@ class SettingsWindow(qtw.QWidget):
         else:
             self.save_button.setStyleSheet('background-color: green;')
             keyring.set_password('Jira Data', user, password)
+            settings = qtc.QSettings('Jira Data', url)
+            print(qtc.QSettings.fileName(settings))
 
 
 class MainWindow(qtw.QWidget):
