@@ -13,6 +13,6 @@ else Data validation is incorrect
 JiraApi --> SettingsWindow: Unsuccessfully (message)
 end
 user -> SettingsWindow: Enter button "Save"
-SettingsWindow -> Qsettings: Save Url
+SettingsWindow -> Qsettings: Save Url (\HKEY_CURRENT_USER\Software\Jira Data\Url)
 SettingsWindow -> WindowsCredentials: Save username/password
 @enduml
