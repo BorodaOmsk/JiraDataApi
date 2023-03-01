@@ -187,11 +187,12 @@ class SettingsWindow(qtw.QWidget):
             self.save_button.setStyleSheet('background-color: green;')
             keyring.set_password('Jira Data', user, password)
             settings = qtc.QSettings('Jira Data', url)
-            print(qtc.QSettings.fileName(settings))
+            settings.setValue("Url", url)
+            print(qtc.QSettings.fileName(settings))  # получить путь по которому хранится значение Url
+            print(settings.value('Url'))  # получить значение из реестра Windows
 
 
 class MainWindow(qtw.QWidget):
-
     def __init__(self):
         super().__init__()
         qdarktheme.setup_theme('auto')
@@ -235,8 +236,6 @@ class MainWindow(qtw.QWidget):
 
     def settings_click(self):
         self.settings_click = SettingsWindow()
-        # self.settings_click.set_messages(self.message_a, self.message_b)
-        # self.settings_click.submitted.connect(self.update_messages)
         self.settings_click.show()
 
 
