@@ -9,7 +9,7 @@
 
 ## Сборка в EXE файл с помощью [Nuitka](https://github.com/Nuitka/Nuitka)  
 1. Установить Nuitka: `python -m pip install nuitka` 
-2. Выполнить в Terminal: `python -m nuitka --standalone --windows-disable-console --plugin-enable=pyqt6 --onefile JIraDataMainWindow.py`
+2. Выполнить в Terminal: `python -m nuitka --standalone --windows-disable-console --plugin-enable=pyqt6 --onefile JIraData.py`
 
 ***Сборка протестирована для Windows 10***
 
